@@ -37,7 +37,7 @@ git clone https://github.com/Yiling-Ma/VideoVera.git
 cd VideoVera
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -e '.[geometry,dev]'
+python -m pip install -e '.[geometry]'
 videovera --help
 ```
 
@@ -75,7 +75,7 @@ runs; completed outputs and failure records are preserved.
 ## Layout
 
 ```text
-src/videovera/
+data_generator/
   data/
     navigation/        # Annotation routes, rendering, pose actions and landmarks
     routes/            # Forward, shape and reverse task generation
@@ -89,7 +89,6 @@ src/videovera/
   packaging.py         # Acceptance, isolation, deduplication and split export
 configs/               # Source/review templates and quality policy
 docs/                  # Installation, generation and export contracts
-tests/                 # Synthetic geometry/media and regression tests
 ```
 
 ## Quality and split contracts
@@ -115,18 +114,18 @@ tests/                 # Synthetic geometry/media and regression tests
 See [acceptance and formats](docs/acceptance.md) for exact inputs and outputs.
 No model training or recurring background process is launched by these commands.
 
-## Checks
+## Installation checks
 
 ```bash
-python -m pytest -q
-python -m ruff check src tests
+videovera --help
+python -m data_generator --help
 ```
 
-The test fixtures are synthetic. They check geometry, inverse actions, shape
-boundaries, class/letter balancing, immutable publication, physical-source
-identity, reference scoring, corruption detection, and temporal generation
-through packaging. Real-data generation additionally requires the licensed
-source assets; GPU rendering must be checked in a Habitat-Sim environment.
+The Python package is `data_generator`; the installed command remains
+`videovera`. Core rules were checked against the production implementation.
+Private regression checks cover geometry, media and export invariants; the
+regression suite is not included in this public repository. Real-data generation
+requires the licensed source assets and a compatible Habitat-Sim environment.
 
 ## Source acknowledgements
 

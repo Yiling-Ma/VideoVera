@@ -1,21 +1,17 @@
-# Release checks
+# Installation and code checks
 
-The portable release was checked with Python 3.10 and FFmpeg on a CPU environment.
-The regression suite passes 45 tests and three parametrized subtests. All ten
-public command help entrypoints load successfully, package imports resolve, and
-undefined-name/static syntax checks pass.
+The public source package is `data_generator`, with `videovera` retained as the
+installed command. GitHub Actions installs the package on Python 3.10 / Ubuntu,
+checks undefined-name errors, compiles the Python modules and exercises both
+command entrypoints.
 
-The tests include actual encoding and decoding of small synthetic MP4 fixtures,
-not model inference or real source-data generation. They cover pose/video hash
-binding, forward/inverse actions, terminal-look handling, stationary turns,
-shape boundaries, label/letter balance, single-task selection, immutable
-publication, physical rescans, Training membership, source-protocol approval,
-ordered reference agreement, invalid media, temporal candidate generation,
-policy/reference export, decoded-QA deduplication and frozen warm-up bytes.
-Failed media preservation and follower reference identity are also checked.
+Regression fixtures and internal release-review records are retained privately
+rather than shipped in this repository. The private checks cover geometry,
+forward/inverse actions, shape boundaries, class/letter balance, physical-source
+identity, source-protocol approval, reference validation, media corruption,
+temporal candidate generation, deduplication and frozen warm-up bytes.
 
 Habitat-Sim GPU rendering, calibrated source-data screening at corpus scale and
-the external local landmark-model endpoint require their original runtime and
-licensed inputs. They were not rerun as part of code organization. No checkpoint,
-training job, source-data downloader or recurring monitor was started for this
-release.
+the local landmark-model endpoint require their original runtime and licensed
+inputs. They were not rerun during the directory reorganization. Installation
+checks do not establish complete real-data or GPU reproduction.
