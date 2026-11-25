@@ -1,0 +1,8 @@
+[
+  {
+    "directory": "inputs/arkitscenes/Training/SCAN_ID",
+    "scene_id": "SCAN_ID",
+    "visit_id": "OFFICIAL_PHYSICAL_VISIT_ID",
+    "split": "Training"
+  }
+]

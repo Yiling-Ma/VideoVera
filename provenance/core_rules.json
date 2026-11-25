@@ -1,0 +1,55 @@
+{
+  "checked_functions": [
+    {
+      "module": "videovera/data/navigation/actions.py",
+      "function": "extract_route",
+      "production_logic_sha256": "8e8a5d3f9d3375416dcef1fb1d95c08041669244daf2a83b30f53115ec6362cd"
+    },
+    {
+      "module": "videovera/data/navigation/questions.py",
+      "function": "build_record",
+      "production_logic_sha256": "400884e95a5224ed900d0d7320388e812ed2d58895b140473e4936702bfb1c33"
+    },
+    {
+      "module": "videovera/data/routes/generate.py",
+      "function": "shape_for",
+      "production_logic_sha256": "551803df4aebfabd4d5b424e12f65c9a22ea2ba9d9a6272283a050f3be83b281"
+    },
+    {
+      "module": "videovera/data/routes/generate.py",
+      "function": "validate_stationary",
+      "production_logic_sha256": "195644056ce719b86b9df13ed84036d68c5dc7958b969a836fa3a4c143d3d591"
+    },
+    {
+      "module": "videovera/data/routes/generate.py",
+      "function": "select",
+      "production_logic_sha256": "0700eadd7d07e36851650cba43ad90182e51a62c7af654809452a3302a682390"
+    },
+    {
+      "module": "videovera/data/displacement/geometry.py",
+      "function": "classify_offset",
+      "production_logic_sha256": "5410cf75dbb21ccdc25919821ce14d983e4d09d28fb674542650896c50ba7118"
+    },
+    {
+      "module": "videovera/data/landmark_routes/generate.py",
+      "function": "candidate_video_quality",
+      "production_logic_sha256": "133c3aa27f2698e61d84ef6f54691ea1dbbbb751c3574f4aa6a3129c92d68428"
+    },
+    {
+      "module": "videovera/data/object_direction/scannet.py",
+      "function": "common_window",
+      "production_logic_sha256": "d6193ab62fd5cdd92b18022b97a6027f3f2354547eb697002fce465f035da9e0"
+    },
+    {
+      "module": "videovera/data/object_direction/quality.py",
+      "function": "target_extent_check",
+      "production_logic_sha256": "9cd222e20e0defd70c08d75acd3b00199232168d8ea55ffa40ba4aed1ce83206"
+    },
+    {
+      "module": "videovera/validation/reference.py",
+      "function": "ordered_match_count",
+      "production_logic_sha256": "79036a50301eea423736b01b3f53dd42798aee40984241179ca53ea402469525"
+    }
+  ],
+  "method": "AST comparison with production source; location attributes excluded"
+}

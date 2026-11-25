@@ -1,0 +1,28 @@
+{
+  "model_view_frames": 24,
+  "object_direction": {
+    "max_per_physical_scene": 10,
+    "minimum_clip_seconds": 8,
+    "maximum_evidence_span_seconds": 30,
+    "minimum_visible_samples_per_role": 3,
+    "minimum_peak_role_support_area_ratio": 0.03,
+    "minimum_geometry_component_margin_m": 0.25,
+    "minimum_target_extent_margin_m": 0.10,
+    "connected_role_covisibility_required": true
+  },
+  "landmark_route_planning": {
+    "max_per_physical_scene": 14,
+    "minimum_clip_seconds": 8,
+    "maximum_clip_seconds": 40,
+    "maximum_frame_gap_seconds": 0.2,
+    "minimum_horizontal_view_ratio": 0.75,
+    "maximum_pitch_p90_degrees": 70,
+    "minimum_strict_source_hits_per_named_object": 3,
+    "minimum_uniform_model_hits_per_named_object": 1,
+    "continuous_original_frames_required": true
+  },
+  "shape_and_reverse": {"candidate_buffer_per_task": 4000, "max_clips_per_parent": 5},
+  "temporal": {"max_event_order_per_recording": 45, "max_adjacent_per_recording": 50, "minimum_uniform_model_hits_per_action": 2},
+  "landmark_observations": {"temperature": 0, "minimum_confidence": 0.70},
+  "reference_validation_weights": {"format": 0.05, "answer": 0.40, "process": 0.45, "joint": 0.10}
+}

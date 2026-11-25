@@ -1,0 +1,483 @@
+{
+  "components": [
+    {
+      "module": "videovera/__main__.py",
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+      "role": "portable_integration",
+      "production_source_sha256": []
+    },
+    {
+      "module": "videovera/cli.py",
+      "sha256": "d20ccc18db8b18507354f5709094be5dc6ef430de5bee5a4e7b15ea3009922c4",
+      "role": "portable_integration",
+      "production_source_sha256": []
+    },
+    {
+      "module": "videovera/data/displacement/camera_actions.py",
+      "sha256": "55684836197d3190d815327c11a84c805f4aed331b98bd6c79c64695059b5289",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "60b0cd297edcce445e7da8ccb630d14eba823f2a7e4ca69409bfb7a6a950c02d"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/choices.py",
+      "sha256": "7626d6128cf96d9a921bfeaf0cbe93467ac7d0c9f1ed64ebd0c0d7c1ab6c5171",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "408b9ffd06014bcd1a04fe9770e0cca1c014d979e0d8f6b71a56318c28501c27"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/generate.py",
+      "sha256": "7f72771f0da6830561b93bc4416089b32033863e3b0131efeeff415831a50710",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "8be05109c7644860707fdb99763847843e648abb21d1fea2b801c75ba23d7fad"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/geometry.py",
+      "sha256": "19926bd6f40a4a51719cfd13e7467fd2480df7f78f3b06c139b54e7077172e47",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "a1e48dd230a24e324dc527a00d4cc50fe4f58e146e9d77256f8b347f5749fefd"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/route_policy.py",
+      "sha256": "7588456208ec873a2033ace65d62c3af0ac866e8ec7fda84e37e2ea610931d5f",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "26a0bb03dc5233acf2ce6a55f39e827a506704c6290a520d1d3427397d112839"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/sensor_video.py",
+      "sha256": "bf9c3ec5b110bcf7109d2fd6c10b2cbefbd3ac98451bbdf04277f2fcfcf26e6b",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "c0ca5e16f6e9141889e343ce9443b19ef2821dfd78e36be0b5a150a62948540a"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/source.py",
+      "sha256": "8a32d118863310eb89b3389cf82eaf43c4132ccfeef2958e33befe146badc878",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "b3a679c23c954ce1435eff5a22f7c741d7a74858b5e14432cc4a670dee55859e"
+      ]
+    },
+    {
+      "module": "videovera/data/displacement/validation.py",
+      "sha256": "ae0568bd014c40fd7f0e18be7c38c7bd3af6c47516daae74b7779509cd8b39ec",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "aa12e295001f52ae14c9f1f299f1f13b4537bb46b81f74c119a251cae451598c"
+      ]
+    },
+    {
+      "module": "videovera/data/landmark_routes/generate.py",
+      "sha256": "d9d57b0051152494c67e89d6834d770c03c6f6876321b93db498f91569a15c6f",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "ba93d5e12a910d25ce1c74a7e87380a2bc1917ecb9b2c49883b854d53be93179"
+      ]
+    },
+    {
+      "module": "videovera/data/landmark_routes/selection.py",
+      "sha256": "650f19f688b1c01cf4f9ef7303ab847fb90aa23fe2a51e185a0ba48ba73099f5",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "88fde8d065b6515a55368620260bddb5fdfd4699c5eef2257c94bd26999c9399"
+      ]
+    },
+    {
+      "module": "videovera/data/landmark_routes/windows.py",
+      "sha256": "2420d52d9d4f2a5224fc9a820d89899d70ab438976c884cd4e662e06b97e4a91",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "785fb0b953194c26be1ff407c03fd39a0a5b5a93a118786cd163e5bf3e7037c6",
+        "7f79919ddfee6ce5a4a6008c6ac146d06bc5abf59ba7a45e785f1b57161a4f3d"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/actions.py",
+      "sha256": "98b07a83959a89743f8781962a4da7eaf9444593bf37e071a952865d98e29432",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "763c97554a414065a8aae892fd4142cf18afc0844e2a382162c9ca4de8dff251"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/annotation_routes.py",
+      "sha256": "0caf0653ac5cebe1166fd68e965e4726a8241c0ea4e2fa65884434b2e059464b",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "d11ec26043e11ac52c2e0bffd837c1f34b5802a8d91f08a915caa4f0ce293522"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/identity.py",
+      "sha256": "991db3711f4954eb155d1f13ed23889d510e0db7f157f090e324244da5cb2071",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "76e1ee636c547d3fbc3387138850a49dcd60a633a10d3d8869a743c870ff371f",
+        "4311f6bdac559a552db33120b1c0a14fb29d231bf94d73c0adb35c144d766707"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/landmarks.py",
+      "sha256": "84314827515d5d462daec186f4f4e443814bbfd45a5db597f34477d6b36826d5",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "72d7302d29832afe7b2db279f7ea71d6feb9dc66f15cca2912e7c9a7cf5e3835"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/navmesh.py",
+      "sha256": "70c3cfbff3fc0487072a4c5958950811984e9aa9e6c063481d021a0017c1aba0",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "eef38877db099e07acb2019af77e436ec47ac7f6a4c95587a392613772060d86"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/questions.py",
+      "sha256": "677a6f50207f76cddff93bf98ef85510be56e81e985a9faae216d719f73fa850",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "053f2a0596bed1ff82ba32363261eb46f70429e7dcf55b502fe328a09bcebfd5"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/render.py",
+      "sha256": "eca21f6a5eb4fac4f1e25909302e2fe0a42f3f6c57e5d15b62c41790927bd8e0",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "6a487afc4a92c3541d580952bf1f179968ed256260be6088c1ce35ec14cfaac9"
+      ]
+    },
+    {
+      "module": "videovera/data/navigation/renderer.py",
+      "sha256": "428d17309361ef4adaad9f36898a2475a4ce8d57b3edf91563971056f165af91",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "dffb4ee2ef079d0d9187583ad7cb85300f48014f47cc6ad3a708011f03d38eb8"
+      ]
+    },
+    {
+      "module": "videovera/data/object_direction/arkitscenes.py",
+      "sha256": "62e136f5c5171cfb6828155fbb0adbbdb5b965666e219b7eb1e95cbfae1d2875",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "540f7d8adb113c6fb085a0c9e81c56d961dc195f3503b7f72274abc9ec62ab9b"
+      ]
+    },
+    {
+      "module": "videovera/data/object_direction/build_scannet.py",
+      "sha256": "bd68899badd402256ab55c83375fb6ed4e1b92bf46cf777a3744467570dc84b2",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "b440def1ba2964e9fd8ec80c4089ba7820310dc89790ab9191dfef9b176c2a4e"
+      ]
+    },
+    {
+      "module": "videovera/data/object_direction/descriptions.py",
+      "sha256": "cf4f2b48bace124c745b49496bd0e9808da21846ea9d771abb94275d23ec0ed5",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "66a766293b645f935a069563dac7c9164bbf23a762c95fcd6f355421df39fc53"
+      ]
+    },
+    {
+      "module": "videovera/data/object_direction/quality.py",
+      "sha256": "dbaae951b31db08a501426b0e27df8ceaf90dbf7cd0e6bccf1ca612e8ec02eff",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "332299918e7e24dc6a98ee16e2337f48d25fde909884d4bfb4c42a27439c269e"
+      ]
+    },
+    {
+      "module": "videovera/data/object_direction/scannet.py",
+      "sha256": "6d7b5516f1e7978f938953ff3aec0745b110e70d5658fbdae8f7e51dcf3f1d1b",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "2daf33154e1b6370382df21390945acbfd47e8107baa5633ca98577babc1adf2"
+      ]
+    },
+    {
+      "module": "videovera/data/routes/entrypoint.py",
+      "sha256": "7ab756a4dd57a19d1fc800f5c16d0eb85d31ef7813c181dd890b6bf357f9fdcb",
+      "role": "portable_integration",
+      "production_source_sha256": []
+    },
+    {
+      "module": "videovera/data/routes/finalize.py",
+      "sha256": "0cf6ac75cb430909ab669b6e6f0ec384aec011a64c5c56b4ab4e414066eef671",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "66a6577ab52ce223271689d43e282489fd262d8d945188601dd161d3b70353a6"
+      ]
+    },
+    {
+      "module": "videovera/data/routes/generate.py",
+      "sha256": "01ce86667af80ddf364af751cf6e985d286a7b2a898da5bc1ba39f874ccac05c",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "dca2e3cc74cc1b09eb9bbb2071f14791d70290eb9c2e7a1d9418e94f56c3d957"
+      ]
+    },
+    {
+      "module": "videovera/data/temporal/event_order.py",
+      "sha256": "2c1e64f1c124638527bdda99f495f3baa4ab1f56f67814389ad2eef2483c9a02",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "013b50c11ce881ca2071e949ff3ec15bb3bca1b7397442a91da50c146c52b8b0"
+      ]
+    },
+    {
+      "module": "videovera/data/temporal/generate.py",
+      "sha256": "a0af7fb231333f64461ef2f6afb02ecc9701e1570af0c49d3fc0b982e3e9ff35",
+      "role": "portable_integration",
+      "production_source_sha256": []
+    },
+    {
+      "module": "videovera/formats/canonical.py",
+      "sha256": "c5023ce83840401eed7ddb88a615fdb358094a7f928f604bd6a44748db747d7f",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "fc607bd18508f4a75f0dc26ca51e432165b088574829b6baea24041072d6eee5"
+      ]
+    },
+    {
+      "module": "videovera/formats/messages.py",
+      "sha256": "4d418835899b609cdc9b68b3989a7ebaaf72c78dcfd5a211aee9144982cc36a7",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "03a1ebcaaa2a095da30f0cc89a257203a9bd723dea8731ead1a4a7de52541762"
+      ]
+    },
+    {
+      "module": "videovera/formats/normalization.py",
+      "sha256": "fd58a2808abf897cc8dfda9e1364e58a46ea93b8a6b7dd7b6c2ad049c50aef68",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "6967abf140e83e73bf16f3f05722fad3508033e98343357d180d521c076b3bf3",
+        "a0df631937ae62fe31f8c6e570298ce53b35a3c5155c905c82e13276537745f7"
+      ]
+    },
+    {
+      "module": "videovera/formats/options.py",
+      "sha256": "7ab4b681a671b795a60a0ac744f737d553f6d352fd354f45ad36f5448b706236",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "7e8dae33c29557a36fd8a527158e16ed7f9c24b88fbfe4189d5dbeff216e4bf5"
+      ]
+    },
+    {
+      "module": "videovera/formats/raw.py",
+      "sha256": "5ba5e39827f6d1cd08cbbb5a60388c11165b4934bf9d743c4bf72fd974637a68",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "cbb6aff989d95df7563446de693478330796ecd84972fd045c2574bcefd07b45"
+      ]
+    },
+    {
+      "module": "videovera/formats/route_claims.py",
+      "sha256": "425a51ca1e285cab3c538610af83aee8709a580fc9445a678e3f2b7915960bec",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "77997424079cd5af9a1a64759437332e0e1eaf39f09aaebd54c21f45a1960c4d"
+      ]
+    },
+    {
+      "module": "videovera/formats/shape_labels.py",
+      "sha256": "045a0badd18d71ac12af290867373e308badfd98e1143745de806d712352ed26",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "3624794c6c0a99cc65fcff722f3893063384fccf59fc7a5872fbb513c3adc63f"
+      ]
+    },
+    {
+      "module": "videovera/formats/spatial_claims.py",
+      "sha256": "660918c2a71ee7776251816f2215ba75a14b1963b3b04015a583fb85b2f6f730",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "716e3b41a4193b9ffc1d202e967ce94d1fcdcd2a1ac7434b2b5629c7e112df63"
+      ]
+    },
+    {
+      "module": "videovera/formats/steps.py",
+      "sha256": "aea7253d3851e1fbc4554dcf4f3adf930d668c4817bf154fbbf8b777a0bd9d6a",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "6aba6be9faf9d4a23e94739e00665e59ba034bf280a55e0b0d446c420b39a20e"
+      ]
+    },
+    {
+      "module": "videovera/formats/targets.py",
+      "sha256": "f47d7174b5259ad59fb993c76c3e3fe622ceb96c48121c917dae0dd993984d64",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "3d7d9f8eff492550f0a372a070e0b031e162a467ecc20650ee79a3d8e5b5fe12"
+      ]
+    },
+    {
+      "module": "videovera/formats/temporal_claims.py",
+      "sha256": "fe0284362ad0a3f23680850670f2454dccc7badd2513788b054de29313dee740",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "cc00add147e34eb54106ae79b796c7e6f8192e7b1c57b7fa5842bebfa26110dc"
+      ]
+    },
+    {
+      "module": "videovera/formats/validation.py",
+      "sha256": "bd1f9f218de3fe8432acdc485373ee2fadd1c779afdd64555f01a709db234c1f",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "dd7868ff3b0f7882652179d66b47b6b48b36a35a3b562432618bdc427365e7a3"
+      ]
+    },
+    {
+      "module": "videovera/io.py",
+      "sha256": "dde155f8fb5990b96008068c6ae3c0e9baa4cf7e690ddc723e887799284484a2",
+      "role": "portable_integration",
+      "production_source_sha256": []
+    },
+    {
+      "module": "videovera/packaging.py",
+      "sha256": "5be931ad3b7b9c883e7c326aac4ed6a78410fad3d02226345f82320e73dfa935",
+      "role": "portable_integration",
+      "production_source_sha256": []
+    },
+    {
+      "module": "videovera/sources/arkit_visibility.py",
+      "sha256": "a7d95c7b05b47db3365a05816999a225965b4dc032fbc7c5aa0c5e6c57f97f4a",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "d6c01af5037f6bec3f117a22249b517e961232caafe4f80ec2605aea80835c59"
+      ]
+    },
+    {
+      "module": "videovera/sources/epic/annotations.py",
+      "sha256": "1e9bfd57c3c8cce51d58a20638be9e4093818690fd74316b0492637c743469fc",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "1e8f0b7f209711bddf838b12e954d84eb41d6ebcca58218eff2cb24abbb9b8fd"
+      ]
+    },
+    {
+      "module": "videovera/sources/epic/clip_slicer.py",
+      "sha256": "6a04c5546f61a20ccb46fc435773eaf7b01ab82c080a2e762a9c77d7ba32412d",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "4e10352fb2fe87646606a56ecbeb1e59069c5b636282c691b948c066eb4333c6"
+      ]
+    },
+    {
+      "module": "videovera/sources/epic/dataset.py",
+      "sha256": "7eedf529616f4e275704638f5e6cdf8295b16491979a48e94f58a556728aeb08",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "081ac78d939a35a6f8dc57e2fb5d343ea2965a5ba59246f9b6fbea5793ec2ee7"
+      ]
+    },
+    {
+      "module": "videovera/sources/epic/generators.py",
+      "sha256": "febc4ada91c9af3012562ce9e03b7958dc54f684393e26bdb42ab44fa5ffb081",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "cb4c93ac0798755b30ad04b2470db08964ebc7edfc7431c5cd0e44016df4cbb4"
+      ]
+    },
+    {
+      "module": "videovera/sources/epic/media.py",
+      "sha256": "91363f704d86607d0b700782f53d1155f96d0997f1b89962dfa9a6a06d8b88e0",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "f4bd6a2d973b106b24c7e230255f7ce001ae8351cd9806f0b52c55feef67faa1"
+      ]
+    },
+    {
+      "module": "videovera/sources/epic/qa_schema.py",
+      "sha256": "6bf6f50d076e3165a7a79b34ee28f1bdbaa53b767aac6632c28c6281e07108b2",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "93034ac139a86a5fbd1b4e0e4be228009435cc59f194c57596388c8534232367"
+      ]
+    },
+    {
+      "module": "videovera/sources/spatial_geometry/arkitscenes.py",
+      "sha256": "aa544f49adcdeab5911081fd2fbb4cab72117770fe8d3608e906924e37d35f66",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "7d427151367cc520953c3e38d24d674075f3d0afcbf5676788fc691dc7194cad"
+      ]
+    },
+    {
+      "module": "videovera/sources/spatial_geometry/generators.py",
+      "sha256": "d12a96602b86076405accac6e2b04e325706103af778ddb06d392e8394e19863",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "cff56c7bb79e6220706837a37fa3bb400a3994b610317aa2b832e3462f5a9c9e"
+      ]
+    },
+    {
+      "module": "videovera/sources/spatial_geometry/geometry.py",
+      "sha256": "3b9f3f45200553f3e36c08b755326b30e6f7e6c69965066757901a8ce0d6e98b",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "8c09cfd9c456f364f8e5475319edac9158166ba850921be6f4f1e5313eb344ad"
+      ]
+    },
+    {
+      "module": "videovera/sources/spatial_geometry/qa_schema.py",
+      "sha256": "10d3da41eef1ee55053d571fef7c51fa145abb31e6eb23f3e753db701935e39a",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "4d7ae3a902a043203469bff3486564eea4d1f7ade8509dead4c47dcc7a10ad81"
+      ]
+    },
+    {
+      "module": "videovera/sources/spatial_geometry/scannet.py",
+      "sha256": "f0e9ee3fa1d6591e306d3492c3cc511a0c0fcab297d3045a3b7aaee3521abe61",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "a4ce0f1ec8cf930a5beabeb10a72b4e48a060d128277493017fe8e96891e871d"
+      ]
+    },
+    {
+      "module": "videovera/sources/spatial_geometry/visibility.py",
+      "sha256": "d88593eb1b8323bff9df6e5ea38dad331cea3f2c0af4e76d32632544031f8864",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "0fc7602f9b72abc1da38c028afa3bc8b382d20edaa1d5ef2e32185274cba1fed"
+      ]
+    },
+    {
+      "module": "videovera/validation/media.py",
+      "sha256": "a432487a888bc5e33d352a296adeec684ff89e3d883bb7a63b13ed045e78eaf5",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "2f402be4401cdf4d8c04cf9a8a75a5042d9296776636c08a9b7f95751dc6ff07"
+      ]
+    },
+    {
+      "module": "videovera/validation/reference.py",
+      "sha256": "ed8900855b33bc41c576fc38fe38ed459fd6e8739b575fb2810f1fcf7b550d69",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "eaa5b6276074d908fc88080e4e30fb2d19c3f61d885c4c28dc038f1a5d868659"
+      ]
+    },
+    {
+      "module": "videovera/validation/trace.py",
+      "sha256": "6de07d38f5cab68e52a3cb7410ab805038379b7af4f8ed10073c2ef06c4cecc4",
+      "role": "production_logic_port",
+      "production_source_sha256": [
+        "64b66cb5238e50f270e9163658d060e7369e8faab0bf3242ff510463dde9180b"
+      ]
+    }
+  ]
+}

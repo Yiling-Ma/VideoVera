@@ -1,0 +1,6 @@
+{
+  "scannet": {"SCAN_ID": {"split": "train", "physical_scene_id": "OFFICIAL_PHYSICAL_SCENE_ID"}},
+  "arkitscenes": {"SCAN_ID": {"split": "Training", "physical_scene_id": "OFFICIAL_PHYSICAL_VISIT_ID"}},
+  "r2r": {"SCENE_ID": {"split": "train", "physical_scene_id": "SCENE_ID"}},
+  "epic": {"VIDEO_ID": {"split": "train", "physical_scene_id": "VIDEO_ID"}}
+}
