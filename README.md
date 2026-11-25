@@ -493,13 +493,19 @@ These commands do not start model training or upload the dataset.
 
 ## Acknowledgements
 
-The pipeline reads annotations from ScanNet, ScanRefer, ARKitScenes,
-Matterport3D, R2R, RxR and EPIC-KITCHENS-100 and uses Habitat-Sim for continuous
+The pipeline reads annotations from [ScanNet](https://github.com/ScanNet/ScanNet),
+[ScanRefer](https://github.com/daveredrum/ScanRefer),
+[ARKitScenes](https://github.com/apple-aiml-research/ARKitScenes),
+[Matterport3D](https://niessner.github.io/Matterport/),
+[R2R](https://bringmeaspoon.org/),
+[RxR](https://github.com/google-research-datasets/RxR) and
+[EPIC-KITCHENS-100](https://epic-kitchens.github.io/2026) and uses
+[Habitat-Sim](https://github.com/facebookresearch/habitat-sim) for continuous
 navigation rendering. These datasets and dependencies retain their own licenses
 and citation requirements. Dataset assets and third-party model weights are not
 redistributed by this code repository.
 
 ## Contact
 
-For questions about the datasets or data-generation pipeline, please open a
-[GitHub issue](https://github.com/Yiling-Ma/VideoVera/issues).
+For questions about the datasets or data-generation pipeline, please contact
+[yiling.ma@yale.edu](mailto:yiling.ma@yale.edu).
