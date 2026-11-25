@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://yiling-ma.github.io/VideoVera/">
+  <a href="https://yiling-ma.github.io/VideoVera-website/">
     <img src="https://img.shields.io/badge/Project-Website-75539B?style=flat-square" alt="VideoVera project website">
   </a>
   <a href="https://github.com/Yiling-Ma/VideoVera">
