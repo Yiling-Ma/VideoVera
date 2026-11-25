@@ -28,6 +28,22 @@ Public module and command names describe their purpose rather than historical
 experiment versions. Stable task keys and serialized schema identifiers are
 retained so existing dataset records remain readable.
 
+## Training datasets
+
+The frozen training releases are available on Hugging Face:
+
+| Release | Total examples | Warm-up SFT | RL prompts |
+|---|---:|---:|---:|
+| [VideoVera-6.4k](https://huggingface.co/datasets/YilingMa/VideoVera-6.4k) | 6,400 | 800 | 5,600 |
+| [VideoVera-12k](https://huggingface.co/datasets/YilingMa/VideoVera-12k) | 12,431 | 1,600 | 10,831 |
+| [VideoVera-27k](https://huggingface.co/datasets/YilingMa/VideoVera-27k) | 27,229 | 1,600 | 25,629 |
+
+Each release includes video payloads, frozen training partitions, separate RL
+inputs and reference targets, checksums and a download/preparation guide. The
+12k and 27k releases share the same 1,600-example warm-up file byte-for-byte and
+unchanged warm-up videos. The 6.4k release retains its original 800-example
+warm-up partition. See each dataset card for task counts and exact file formats.
+
 ## Install
 
 Python 3.10 or later, FFmpeg and FFprobe are required.
