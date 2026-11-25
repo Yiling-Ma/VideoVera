@@ -4,6 +4,9 @@
 </h1>
 
 <p align="center">
+  <a href="https://yiling-ma.github.io/VideoVera/">
+    <img src="https://img.shields.io/badge/Project-Website-75539B?style=flat-square" alt="VideoVera project website">
+  </a>
   <a href="https://github.com/Yiling-Ma/VideoVera">
     <img src="https://img.shields.io/badge/Code-GitHub-53658A?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Code: GitHub">
   </a>
