@@ -1,17 +1,26 @@
-# Installation and code checks
+# Installation checks
 
-The public source package is `data_generator`, with `videovera` retained as the
-installed command. GitHub Actions installs the package on Python 3.10 / Ubuntu,
-checks undefined-name errors, compiles the Python modules and exercises both
-command entrypoints.
+The Python package is `data_generator`; the installed command is `videovera`.
+After installation, check both entrypoints and compile the Python modules:
 
-Regression fixtures and internal release-review records are retained privately
-rather than shipped in this repository. The private checks cover geometry,
-forward/inverse actions, shape boundaries, class/letter balance, physical-source
-identity, source-protocol approval, reference validation, media corruption,
-temporal candidate generation, deduplication and frozen warm-up bytes.
+```bash
+videovera --help
+python -m data_generator --help
+python -m compileall -q data_generator
+```
 
-Habitat-Sim GPU rendering, calibrated source-data screening at corpus scale and
-the local landmark-model endpoint require their original runtime and licensed
-inputs. They were not rerun during the directory reorganization. Installation
-checks do not establish complete real-data or GPU reproduction.
+Inspect task-specific options before running a generator:
+
+```bash
+videovera route-tasks --task route_shape --help
+videovera temporal --help
+videovera package --help
+```
+
+These commands check installation and expose the available arguments. Actual
+generation additionally requires the relevant official source assets. Continuous
+navigation rendering requires Habitat-Sim and the navigation dependencies;
+landmark observation uses a separately configured local model endpoint.
+
+See [source preparation](sources.md) for runtime inputs and
+[review and export](acceptance.md) for candidate acceptance and output formats.

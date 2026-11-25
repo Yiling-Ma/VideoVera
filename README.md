@@ -25,54 +25,83 @@
 </p>
 
 <p align="center">
-  <a href="#how-to-use-data_generator">Quickstart</a> &nbsp;&middot;&nbsp;
-  <a href="#tasks-and-annotation-sources">Eight Tasks</a> &nbsp;&middot;&nbsp;
-  <a href="#training-datasets">Training Datasets</a>
+  <a href="#introduction">Introduction</a> &nbsp;&middot;&nbsp;
+  <a href="#installation">Installation</a> &nbsp;&middot;&nbsp;
+  <a href="#data">Data</a> &nbsp;&middot;&nbsp;
+  <a href="#data-generation">Data Generation</a> &nbsp;&middot;&nbsp;
+  <a href="#documentation">Documentation</a>
 </p>
 
-This repository contains the data-construction pipeline for VideoVera. Existing
-video annotations determine questions, answer choices, correct answers and
-reference reasoning claims. The generators retain continuous source video and
-record the geometry, poses or temporal segments used to derive each example.
+## News
 
-This release focuses on data generation and acceptance. It does not include
-training runs, checkpoints, experimental results, benchmark result analysis,
-error analysis or cluster-specific job controllers.
+- **2026.11.25** — The final data-construction pipeline and three training releases
+  are public. See [Data](#data) for the exact 6.4k, 12k and 27k partitions.
 
-## Tasks and annotation sources
+## Introduction
 
-| Task | Command | Source annotations |
-|---|---|---|
-| Object Direction | `object-direction-scannet`, `object-direction-arkit` | ScanNet/ScanRefer objects and instance masks; ARKitScenes object boxes, RGB-D and poses |
-| Egocentric Displacement | `displacement` | R2R/RxR routes, continuous Matterport3D rendering and measured camera poses |
-| Forward Route Planning | `route-tasks --task route_plan` | Measured forward actions and visually grounded route landmarks |
-| Landmark Route Planning | `landmark-routes` | ARKitScenes object boxes, depth support, camera trajectory and continuous RGB |
-| Route-Shape Classification | `route-tasks --task route_shape` | Complete measured motion/turn sequence |
-| Reverse Route Planning | `route-tasks --task reverse_route_plan` | Forward route, inverse actions and reversed temporal order |
-| Event-Sequence Ordering | `temporal --task event_order` | EPIC-KITCHENS-100 Training action segments |
-| Adjacent Action | `temporal --task before_or_after_action` | EPIC-KITCHENS-100 Training action segments and their neighbors |
+VideoVera constructs video-reasoning examples with verifiable process
+supervision. Each example pairs a continuous video and a multiple-choice
+question with a correct option and ordered reference claims, derived from
+geometry, measured camera poses or annotated action intervals.
 
-Public module and command names describe their purpose rather than historical
-experiment versions. Stable task keys and serialized schema identifiers are
-retained so existing dataset records remain readable.
+This repository provides the final data-construction pipeline for eight spatial,
+route and temporal tasks. It includes source readers, task generators, review
+templates and export tools for SFT and RL data, with policy inputs kept separate
+from reference targets.
 
-## Training datasets
+<a id="tasks-and-annotation-sources"></a>
 
-The frozen training releases are available on Hugging Face:
+### Eight reasoning tasks
 
-| Release | Total examples | Warm-up SFT | RL prompts |
-|---|---:|---:|---:|
-| [VideoVera-6.4k](https://huggingface.co/datasets/YilingMa/VideoVera-6.4k) | 6,400 | 800 | 5,600 |
-| [VideoVera-12k](https://huggingface.co/datasets/YilingMa/VideoVera-12k) | 12,431 | 1,600 | 10,831 |
-| [VideoVera-27k](https://huggingface.co/datasets/YilingMa/VideoVera-27k) | 27,229 | 1,600 | 25,629 |
+| Task | Annotation sources |
+|---|---|
+| Object Direction | ScanNet/ScanRefer objects and instance masks; ARKitScenes object boxes, RGB-D and poses |
+| Egocentric Displacement | R2R/RxR routes, continuous Matterport3D rendering and measured camera poses |
+| Forward Route Planning | Measured forward actions and visually grounded route landmarks |
+| Landmark Route Planning | ARKitScenes object boxes, depth support, camera trajectory and continuous RGB |
+| Route-Shape Classification | Complete measured motion/turn sequence |
+| Reverse Route Planning | Forward route, inverse actions and reversed temporal order |
+| Event-Sequence Ordering | EPIC-KITCHENS-100 Training action segments |
+| Adjacent Action | EPIC-KITCHENS-100 Training action segments and their neighbors |
 
-Each release includes video payloads, frozen training partitions, separate RL
-inputs and reference targets, checksums and a download/preparation guide. The
-12k and 27k releases share the same 1,600-example warm-up file byte-for-byte and
-unchanged warm-up videos. The 6.4k release retains its original 800-example
-warm-up partition. See each dataset card for task counts and exact file formats.
+## Highlights
 
-## Install
+- **Eight reasoning tasks.** Spatial direction and displacement, forward and
+  landmark-based routes, trajectory shape, reverse routes and temporal actions.
+- **Annotation-derived reference traces.** Questions, answers and ordered claims
+  retain the geometry, measured motion or action timings used to construct them.
+- **Three frozen training scales.** 6,400, 12,431 and 27,229 examples, with explicit
+  warm-up and RL partitions. The two larger scales share the same warm-up data.
+- **Continuous video and portable exports.** Releases include video payloads,
+  SFT records, answer-free RL inputs, separate reference targets and checksums.
+
+<a id="layout"></a>
+
+## Repository Structure
+
+```text
+VideoVera/
+├── assets/                    # README figures and editable SVGs
+├── configs/                   # Source/review templates and quality policy
+├── data_generator/
+│   ├── data/                  # Generators for the eight tasks
+│   │   ├── navigation/        # Route annotations, continuous rendering and poses
+│   │   ├── routes/            # Forward, shape and reverse route tasks
+│   │   ├── displacement/      # Egocentric displacement
+│   │   ├── object_direction/  # ScanNet and ARKitScenes Object Direction
+│   │   ├── landmark_routes/   # Continuous landmark-defined route windows
+│   │   └── temporal/          # Event ordering and adjacent actions
+│   ├── sources/               # Official annotation readers and geometry utilities
+│   ├── formats/               # Chat records and typed reference construction
+│   ├── validation/            # Media, schema and reference validation
+│   └── packaging.py           # Acceptance, deduplication and partition export
+├── docs/                      # Source preparation, generation and export guides
+└── pyproject.toml             # Package configuration and dependencies
+```
+
+<a id="install"></a>
+
+## Installation
 
 Python 3.10 or later, FFmpeg and FFprobe are required.
 
@@ -99,7 +128,52 @@ Acquire each source through its official distribution under its own terms.
 See [source preparation](docs/sources.md) and the complete
 [generation recipe](docs/generation.md).
 
-## How to use `data_generator`
+<a id="training-datasets"></a>
+
+## Data
+
+The frozen training releases are available on Hugging Face:
+
+| Release | Total examples | Warm-up SFT | RL prompts |
+|---|---:|---:|---:|
+| [VideoVera-6.4k](https://huggingface.co/datasets/YilingMa/VideoVera-6.4k) | 6,400 | 800 | 5,600 |
+| [VideoVera-12k](https://huggingface.co/datasets/YilingMa/VideoVera-12k) | 12,431 | 1,600 | 10,831 |
+| [VideoVera-27k](https://huggingface.co/datasets/YilingMa/VideoVera-27k) | 27,229 | 1,600 | 25,629 |
+
+Each release includes video payloads, frozen training partitions, separate RL
+inputs and reference targets, checksums and a download/preparation guide. The
+12k and 27k releases share the same 1,600-example warm-up file byte-for-byte and
+unchanged warm-up videos. The 6.4k release retains its original 800-example
+warm-up partition. See each dataset card for task counts and exact file formats.
+
+### Download a training release
+
+With the [Hugging Face CLI](https://huggingface.co/docs/huggingface_hub/en/guides/cli)
+installed, choose one scale. For example, download and prepare the 27k release:
+
+```bash
+hf download YilingMa/VideoVera-27k \
+  --repo-type dataset \
+  --local-dir work/downloads/videovera-27k
+
+python work/downloads/videovera-27k/tools/prepare_data.py \
+  --root work/downloads/videovera-27k \
+  --output work/prepared/videovera-27k
+```
+
+Use `YilingMa/VideoVera-6.4k` or `YilingMa/VideoVera-12k` for the other scales,
+with corresponding local directory names. The preparation helper verifies
+checksums, materializes the original videos and resolves local video paths.
+Use a new preparation output directory.
+
+The prepared `all.jsonl` is the full SFT corpus; `sft_warmup.jsonl` is the frozen
+warm-up split. Use `grpo_policy.jsonl` for RL model inputs and keep
+`grpo_targets.jsonl` separate from the model context. Each dataset card describes
+its files and preparation steps in detail.
+
+<a id="how-to-use-data_generator"></a>
+
+## Data Generation
 
 Run the commands below from the repository root after installation. The examples
 use `python -m data_generator`; the installed `videovera` command accepts the same
@@ -115,6 +189,9 @@ subcommands and arguments. Run only the branches required for your tasks.
 
 Acquire the required official Training assets and edit the source manifests using
 [the source preparation guide](docs/sources.md). A typical local layout is:
+
+<details>
+<summary>Expected local input layout</summary>
 
 ```text
 inputs/
@@ -137,6 +214,8 @@ inputs/
 work/                              # Generated candidates, media and export artifacts
 ```
 
+</details>
+
 Not every task needs every source: temporal tasks only need EPIC inputs, while
 Object Direction can use ScanNet/ScanRefer or ARKitScenes. The benchmark and
 source registry used for final packaging must cover the relevant source groups.
@@ -151,6 +230,9 @@ visit must share a visit ID. These templates are not pre-approved source lists.
 This branch supplies the continuous videos and measured poses used by
 Egocentric Displacement, Forward Route Planning, Route-Shape Classification and
 Reverse Route Planning. It requires the navigation dependencies and Habitat-Sim.
+
+<details>
+<summary>Navigation parent preparation: annotations, rendering and landmarks</summary>
 
 First enumerate routes from the official Training annotations:
 
@@ -200,7 +282,12 @@ This command is a model client; it does not launch a model server. The observati
 model supplies landmark labels, while measured pose rules determine route
 answers and reference actions.
 
+</details>
+
 ### 3. Generate candidates for the selected tasks
+
+<details>
+<summary>Generation commands for all eight tasks</summary>
 
 **Forward Route Planning**
 
@@ -307,6 +394,8 @@ When supplementing a temporal pool, pass earlier raw candidates through
 `--existing` to exclude used event windows or anchor/neighbor pairs before
 regeneration. Required actions must survive the uniform 24-frame model view.
 
+</details>
+
 ### 4. Review candidates
 
 Inspect the original continuous videos, questions, choices, answers and retained
@@ -327,6 +416,9 @@ See [the approval format](docs/acceptance.md#reviewed-source-protocol-approval).
 The example below extends an existing corpus while preserving its original
 warm-up partition. Include only candidate files produced by your selected
 branches; `--candidates` can be repeated.
+
+<details>
+<summary>Complete packaging command and required inputs</summary>
 
 ```bash
 python -m data_generator package \
@@ -365,6 +457,8 @@ Packaging checks reference schema and reward-one validity, official Training
 membership, benchmark physical-source isolation, full media decode, decoded
 content/QA slots, source semantics and the combined existing/new caps.
 
+</details>
+
 ### 6. Inspect the actual outputs
 
 ```text
@@ -388,42 +482,24 @@ output directories for changed tasks or configurations, retain rejection and
 partial-output records, and use a new directory for each final package export.
 These commands do not start model training or upload the dataset.
 
-## Layout
+## Documentation
 
-```text
-data_generator/
-  data/
-    navigation/        # Annotation routes, rendering, pose actions and landmarks
-    routes/            # Forward, shape and reverse task generation
-    displacement/      # Endpoint-frame geometry and balanced route selection
-    object_direction/  # ScanNet and ARKitScenes spatial candidates
-    landmark_routes/   # Depth-supported objects and continuous route windows
-    temporal/          # Event ordering and adjacent-action candidates
-  sources/             # Official annotation readers and geometry utilities
-  formats/             # Messages, options and typed reference construction
-  validation/          # Full decode, schema and reference agreement checks
-  packaging.py         # Acceptance, isolation, deduplication and split export
-configs/               # Source/review templates and quality policy
-docs/                  # Installation, generation and export contracts
-```
+| Guide | Contents |
+|---|---|
+| [Source preparation](docs/sources.md) | Official assets, local layouts, physical identities and source registries |
+| [Generation recipes](docs/generation.md) | Task-specific commands, geometry/temporal rules and resume behavior |
+| [Review and export](docs/acceptance.md) | Review formats, source-protocol approval and exported file contracts |
+| [Installation checks](docs/validation.md) | Package entrypoints, syntax checks and runtime requirements |
 
-## Installation checks
-
-```bash
-videovera --help
-python -m data_generator --help
-```
-
-The Python package is `data_generator`; the installed command remains
-`videovera`. Core rules were checked against the production implementation.
-Private regression checks cover geometry, media and export invariants; the
-regression suite is not included in this public repository. Real-data generation
-requires the licensed source assets and a compatible Habitat-Sim environment.
-
-## Source acknowledgements
+## Acknowledgements
 
 The pipeline reads annotations from ScanNet, ScanRefer, ARKitScenes,
 Matterport3D, R2R, RxR and EPIC-KITCHENS-100 and uses Habitat-Sim for continuous
 navigation rendering. These datasets and dependencies retain their own licenses
 and citation requirements. Dataset assets and third-party model weights are not
 redistributed by this code repository.
+
+## Contact
+
+For questions about the datasets or data-generation pipeline, please open a
+[GitHub issue](https://github.com/Yiling-Ma/VideoVera/issues).
