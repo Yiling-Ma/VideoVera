@@ -105,20 +105,11 @@ Run the commands below from the repository root after installation. The examples
 use `python -m data_generator`; the installed `videovera` command accepts the same
 subcommands and arguments. Run only the branches required for your tasks.
 
-```mermaid
-flowchart TD
-    N[Official R2R / RxR Training annotations] --> R[Continuous RGB rendering and measured camera poses]
-    R --> NQ[Displacement, forward, shape and reverse tasks]
-    S[ScanNet / ScanRefer and ARKitScenes RGB-D annotations] --> SQ[Object Direction and Landmark Route Planning]
-    T[EPIC-KITCHENS-100 Training videos and action segments] --> TQ[Event ordering and adjacent action]
-    NQ --> C[Candidate questions, options, answers and source evidence]
-    SQ --> C
-    TQ --> C
-    C --> H[Human review or explicitly approved source protocol]
-    H --> P[Package: validate, isolate sources and deduplicate]
-    B[Fixed benchmark, prior corpus and frozen warm-up] --> P
-    P --> O[Corpus, warm-up, policy inputs and reference targets]
-```
+<p align="center">
+  <a href="assets/data-construction-pipeline.svg">
+    <img src="assets/data-construction-pipeline.png" width="100%" alt="VideoVera data construction: three annotation sources generate eight tasks, followed by human review, validation and deduplication, and export of the frozen training partitions.">
+  </a>
+</p>
 
 ### 1. Prepare local inputs
 
@@ -415,29 +406,6 @@ data_generator/
 configs/               # Source/review templates and quality policy
 docs/                  # Installation, generation and export contracts
 ```
-
-## Quality and split contracts
-
-- Object Direction uses explicit observer/facing/target roles, signed horizontal
-  projections, referent uniqueness, target-extent margins and visual support.
-- Route labels come from measured camera poses. Initial or terminal looks are
-  distinguished from actual path bends. Shape labels and reverse actions are
-  computed without relabeling clips to satisfy quotas.
-- Landmark routes retain one continuous original RGB interval, calibrated poses,
-  depth-supported visibility and uniform model-frame support. Dense window
-  search expands coverage without changing candidate quality tests.
-- Temporal examples use distinct annotated actions, unambiguous time order and
-  at least two uniform model samples per required action.
-- Packaging checks identifiers, physical source groups, full media decoding,
-  uniform decoded-frame content, QA slots, source semantics and reference validity.
-  Physical scene IDs are required; rescans do not create additional scene capacity.
-- Object Direction is capped at 10 examples per physical scene; Landmark Route
-  Planning at 14. Shape/reverse selection retains at most five clips per parent.
-- Frozen warm-up membership and bytes are preserved. Policy exports contain no
-  answers, reference traces, verifier state or assistant messages.
-
-See [acceptance and formats](docs/acceptance.md) for exact inputs and outputs.
-No model training or recurring background process is launched by these commands.
 
 ## Installation checks
 
