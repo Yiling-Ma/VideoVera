@@ -4,8 +4,9 @@
 </h1>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/arXiv-TODO-B31B1B?style=flat-square&amp;logo=arxiv&amp;logoColor=white" alt="arXiv: TODO" title="Paper link will be added when available">
   <a href="https://yiling-ma.github.io/VideoVera-website/">
-    <img src="https://img.shields.io/badge/Project-Website-75539B?style=flat-square" alt="VideoVera project website">
+    <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Project-Homepage-75539B?style=flat-square" alt="VideoVera project website">
   </a>
   <a href="https://github.com/Yiling-Ma/VideoVera">
     <img src="https://img.shields.io/badge/Code-GitHub-53658A?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Code: GitHub">
