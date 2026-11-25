@@ -9,10 +9,10 @@ formal acceptance is a separate step. `--help` shows task-specific options.
 videovera annotation-routes \
   --episodes inputs/r2r_train.json.gz \
   --benchmark inputs/benchmark.jsonl \
-  --output-dir work/annotation_routes --max-legs 6
+  --output-dir work/annotation_routes --shards 1 --max-legs 6
 
 videovera render-routes \
-  --input-dir work/annotation_routes \
+  --input-dir work/annotation_routes/shard_00 \
   --scenes-dir inputs/matterport3d \
   --output-dir work/navigation_parents \
   --count 2000 --speed-scale 0.35 --max-legs 6 \
