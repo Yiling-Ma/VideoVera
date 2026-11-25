@@ -1,6 +1,28 @@
-# VideoVera
+<h1 align="center">
+  VideoVera: Verifiable Process Reward<br>
+  for Video Reasoning
+</h1>
 
-**Verifiable Process Reward for Video Reasoning**
+<p align="center">
+  <a href="https://github.com/Yiling-Ma/VideoVera">
+    <img src="https://img.shields.io/badge/Code-GitHub-53658A?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Code: GitHub">
+  </a>
+  <a href="https://huggingface.co/datasets/YilingMa/VideoVera-6.4k">
+    <img src="https://img.shields.io/badge/Dataset-6.4k-A599B5?style=flat-square&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Hugging Face dataset: VideoVera-6.4k">
+  </a>
+  <a href="https://huggingface.co/datasets/YilingMa/VideoVera-12k">
+    <img src="https://img.shields.io/badge/Dataset-12k-8FA69B?style=flat-square&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Hugging Face dataset: VideoVera-12k">
+  </a>
+  <a href="https://huggingface.co/datasets/YilingMa/VideoVera-27k">
+    <img src="https://img.shields.io/badge/Dataset-27k-C0A587?style=flat-square&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Hugging Face dataset: VideoVera-27k">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#how-to-use-data_generator">Quickstart</a> &nbsp;&middot;&nbsp;
+  <a href="#tasks-and-annotation-sources">Eight Tasks</a> &nbsp;&middot;&nbsp;
+  <a href="#training-datasets">Training Datasets</a>
+</p>
 
 This repository contains the data-construction pipeline for VideoVera. Existing
 video annotations determine questions, answer choices, correct answers and
