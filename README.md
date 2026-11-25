@@ -19,6 +19,12 @@
 </p>
 
 <p align="center">
+  <a href="assets/eight-tasks.png">
+    <img src="assets/eight-tasks.png" width="100%" alt="VideoVera's eight reasoning tasks: Object Direction, Egocentric Displacement, Forward Route Planning, Landmark Route Planning, Route-Shape Classification, Reverse Route Planning, Event-Sequence Ordering, and Adjacent Action.">
+  </a>
+</p>
+
+<p align="center">
   <a href="#how-to-use-data_generator">Quickstart</a> &nbsp;&middot;&nbsp;
   <a href="#tasks-and-annotation-sources">Eight Tasks</a> &nbsp;&middot;&nbsp;
   <a href="#training-datasets">Training Datasets</a>
@@ -31,7 +37,7 @@ record the geometry, poses or temporal segments used to derive each example.
 
 This release focuses on data generation and acceptance. It does not include
 training runs, checkpoints, experimental results, benchmark result analysis,
-error analysis, paper figures or cluster-specific job controllers.
+error analysis or cluster-specific job controllers.
 
 ## Tasks and annotation sources
 
