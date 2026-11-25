@@ -90,7 +90,6 @@ src/videovera/
 configs/               # Source/review templates and quality policy
 docs/                  # Installation, generation and export contracts
 tests/                 # Synthetic geometry/media and regression tests
-provenance/            # Production-component hashes
 ```
 
 ## Quality and split contracts

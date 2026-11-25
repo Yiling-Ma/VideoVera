@@ -29,3 +29,6 @@ dist/
 *.parquet
 *.safetensors
 *.bin
+
+# Internal release-review records
+/provenance/
