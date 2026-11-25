@@ -32,11 +32,6 @@
   <a href="#documentation">Documentation</a>
 </p>
 
-## News
-
-- **2026.11.25** — The final data-construction pipeline and three training releases
-  are public. See [Data](#data) for the exact 6.4k, 12k and 27k partitions.
-
 ## Introduction
 
 VideoVera constructs video-reasoning examples with verifiable process
