@@ -1,5 +1,5 @@
 <h1 align="center">
-  VideoVera: Verifiable Process Reward<br>
+  <img src="assets/videovera-wordmark.svg" alt="VideoVera:" width="168" height="40" align="top"> Verifiable Process Reward<br>
   for Video Reasoning
 </h1>
 
