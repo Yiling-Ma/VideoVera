@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/videovera-logo.svg" alt="VideoVera logo" width="180">
+</p>
+
 <h1 align="center">
   <img src="assets/videovera-wordmark.svg" alt="VideoVera:" width="168" height="40" align="top"> Verifiable Process Reward<br>
   for Video Reasoning

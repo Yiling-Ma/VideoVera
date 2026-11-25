@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 190" fill="none"><title>VideoVera</title><defs><linearGradient id="purple" x1="40" y1="30" x2="172" y2="170" gradientUnits="userSpaceOnUse"><stop stop-color="#80569D"/><stop offset="1" stop-color="#765095"/></linearGradient><linearGradient id="sage" x1="192" y1="74" x2="210" y2="115" gradientUnits="userSpaceOnUse"><stop stop-color="#8FA79A"/><stop offset="1" stop-color="#8AA493"/></linearGradient><linearGradient id="mauve" x1="158" y1="126" x2="142" y2="177" gradientUnits="userSpaceOnUse"><stop stop-color="#A18FAE"/><stop offset="1" stop-color="#9B88A9"/></linearGradient></defs>
+<path d="M8 38h57c8 0 12 3 16 11l66 128H91c-5 0-8-3-11-8L8 38Z" fill="url(#purple)"/>
+<path d="m91 177 94-100c4-6 9-8 16-8h43l-65 98c-4 7-10 10-18 10H91Z" fill="#7B5499"/>
+<path d="m158 111 27-34c4-6 9-8 16-8h43l-27 42h-59Z" fill="url(#sage)"/>
+<path d="m217 111 53-98c4-7 8-10 16-10h49l-54 98c-4 8-9 10-17 10h-47Z" fill="url(#purple)"/>
+<path d="m91 177 27-45c4-6 9-8 17-8h73l-27 43c-4 7-10 10-18 10H91Z" fill="url(#mauve)"/>
+</svg>
