@@ -186,7 +186,7 @@ subcommands and arguments. Run only the branches required for your tasks.
 
 <p align="center">
   <a href="assets/data-construction-pipeline.svg">
-    <img src="assets/data-construction-pipeline.png" width="100%" alt="VideoVera data construction: three annotation sources generate eight tasks, followed by human review, validation and deduplication, and export of the frozen training partitions.">
+    <img src="assets/data-construction-pipeline-63af604337.png" width="100%" alt="VideoVera data construction: three annotation sources generate eight tasks, followed by human review, validation and deduplication, and export of the frozen training partitions.">
   </a>
 </p>
 
