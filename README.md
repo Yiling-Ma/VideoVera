@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/videovera-logo.svg" alt="VideoVera logo" width="180">
+  <a href="https://yiling-ma.github.io/VideoVera-website/#overview" title="Watch the VideoVera overview demo">
+    <img src="assets/videovera-logo.svg" alt="Play the VideoVera overview demo" width="180">
+  </a>
 </p>
 
 <h1 align="center">

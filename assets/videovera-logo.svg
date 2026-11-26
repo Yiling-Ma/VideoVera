@@ -4,4 +4,6 @@
 <path d="m158 111 27-34c4-6 9-8 16-8h43l-27 42h-59Z" fill="url(#sage)"/>
 <path d="m217 111 53-98c4-7 8-10 16-10h49l-54 98c-4 8-9 10-17 10h-47Z" fill="url(#purple)"/>
 <path d="m91 177 27-45c4-6 9-8 17-8h73l-27 43c-4 7-10 10-18 10H91Z" fill="url(#mauve)"/>
+<circle cx="170" cy="101" r="25" fill="white" fill-opacity=".58" stroke="white" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="m164 89 18 12-18 12V89Z" fill="#60427E" fill-opacity=".9"/>
 </svg>
